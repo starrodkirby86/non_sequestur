@@ -1,0 +1,4 @@
+export const QUEST_TOGGLE_COMPLETE = 'QUEST_TOGGLE_COMPLETE';
+export const QUEST_ADD = 'QUEST_ADD';
+export const QUEST_REMOVE = 'QUEST_REMOVE';
+
