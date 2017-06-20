@@ -29,7 +29,7 @@ Quest.propTypes = {
   type: PropTypes.string,
   difficulty: PropTypes.number,
   isComplete: PropTypes.bool,
-  timeStamp: PropTypes.instanceOf(Date),
+  timestamp: PropTypes.instanceOf(Date),
 };
 
 export default Quest;
