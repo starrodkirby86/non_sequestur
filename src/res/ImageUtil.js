@@ -1,0 +1,1 @@
+export const getRandomBackground = () => `/res/bg/${Math.floor(Math.random() * 13) + 1}.jpg`;

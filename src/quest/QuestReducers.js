@@ -19,7 +19,11 @@ export default function questReducer(state = [], action) {
 }
 
 function addQuest(state, action) {
-  const newQuest = QuestUtils.newQuest(action.title, action.description, action.questType, action.difficulty, false, action.timestamp);
+  const newQuest = QuestUtils.newQuest({title: action.title,
+    description: action.description,
+    type: action.questType,
+    difficulty: action.difficulty,
+    timestamp: action.timestamp});
   return state.concat(newQuest);
 }
 
