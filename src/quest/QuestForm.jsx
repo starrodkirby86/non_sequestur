@@ -26,21 +26,17 @@ class QuestForm extends React.Component {
   render() {
     return (
       <Form>
-        <Form.Group>
           <Form.Input name="title"
                       label="Title"
                       value={this.state.title}
                       placeholder="Quest Title"
                       onChange={this.handleChange}/>
-        </Form.Group>
-        <Form.Group>
           <Form.TextArea name="description"
                          label="Description"
                          value={this.state.description}
                          placeholder="Write about your quest here..."
                          onChange={this.handleChange}/>
-        </Form.Group>
-        <Form.Group>
+        <Form.Group widths="equal">
           <Form.Input name="type"
                       label="Quest Type"
                       value={this.state.type}
@@ -54,14 +50,12 @@ class QuestForm extends React.Component {
                       max={10}
                       onChange={this.handleChange}/>
         </Form.Group>
-        <Form.Group>
           <Form.Field
             control={Button}
             type="button"
             onClick={this.handleClick}>
             Submit
           </Form.Field>
-        </Form.Group>
       </Form>
     );
   }

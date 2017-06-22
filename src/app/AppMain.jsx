@@ -1,5 +1,5 @@
 import React from 'react';
-import AppSidebar from './AppSidebar';
+import AppSidebar from './sidebar/AppSidebar';
 import AppContent from './AppContent';
 import { Sidebar, Segment } from 'semantic-ui-react';
 

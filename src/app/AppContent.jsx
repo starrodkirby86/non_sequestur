@@ -12,6 +12,7 @@ export const AppContent = () => (
       <Divider />
       <QuestsContainer />
     </Container>
+  <Divider/>
     <Container>
       <QuestForm />
     </Container>
