@@ -2,12 +2,12 @@ import React from 'react';
 import './vendor/dist/semantic.min.css';
 import { AppContainer } from './app/AppStructure';
 import { initialState } from './app/initialState';
-import reducer from './reducer';
+import reducers from './reducers';
+import middleware from './middleware';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-export const store = createStore(reducer, initialState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+export const store = createStore(reducers, initialState, middleware);
 
 class App extends React.Component {
   render() {

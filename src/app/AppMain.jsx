@@ -1,6 +1,6 @@
 import React from 'react';
 import AppSidebar from './sidebar/AppSidebar';
-import AppContent from './AppContent';
+import AppRouter from './AppRouter';
 import { Sidebar, Segment } from 'semantic-ui-react';
 
 class AppMain extends React.Component {
@@ -11,7 +11,7 @@ class AppMain extends React.Component {
           <AppSidebar visible={this.props.visible} />
           <Sidebar.Pusher>
             <Segment basic>
-              <AppContent />
+              <AppRouter />
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
