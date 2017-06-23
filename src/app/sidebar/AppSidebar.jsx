@@ -1,19 +1,24 @@
 import React from 'react';
-import AppSidebarButton from './AppSidebarButton';
+import AppSidebarButtonContainer from './AppSidebarButton';
 import { Sidebar, Menu } from 'semantic-ui-react';
 
 export const AppSidebar = (props) => (
   <Sidebar as={Menu} animation='slide along' width='thin' visible={props.visible} icon='labeled' vertical inverted>
-    <AppSidebarButton name="home"
-                      label="Home" />
-    <AppSidebarButton name="road"
-                      label="Quests" />
-    <AppSidebarButton name="users"
-                      label="Assigners" />
-    <AppSidebarButton name="child"
-                      label="Profile" />
-    <AppSidebarButton name="settings"
-                      label="Settings" />
+    <AppSidebarButtonContainer name="home"
+                      to="/"
+                      label="Home"/>
+    <AppSidebarButtonContainer name="road"
+                      to="/quests"
+                      label="Quests"/>
+    <AppSidebarButtonContainer name="users"
+                      to="/assigners"
+                      label="Assigners"/>
+    <AppSidebarButtonContainer name="child"
+                      to="/profile"
+                      label="Profile"/>
+    <AppSidebarButtonContainer name="settings"
+                      to="/settings"
+                      label="Settings"/>
   </Sidebar>
 );
 

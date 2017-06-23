@@ -1,40 +1,27 @@
 import React from 'react';
-import { QuestsContainer } from '../quest/QuestsContainer';
-import QuestForm from '../quest/QuestForm';
-import createHistory from 'history/createBrowserHistory'
-import { Container, Header, Divider } from 'semantic-ui-react';
-import Assigner from '../assigner/Assigner';
-import { defaultAssigners } from '../assigner/AssignerUtil';
-import { Route } from 'react-router-dom';
+import createHistory from 'history/createBrowserHistory';
+import Home from './routes/Home';
+import Quests from './routes/Quests';
+import Assigners from './routes/Quests';
+import Profile from './routes/Quests';
+import Settings from './routes/Quests';
+import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
-import AssignerTable from '../assigner/assignerViews/AssignerTable';
+
+/* TODO: This is imperfect. There should be a better way navigating with router :thinking:
+    Consider instead to just opt for using the Link paths instead of dispatching the push actions.
+ */
 
 export const AppRouter = () => (
   <ConnectedRouter history={createHistory()}>
-    <Container>
-      <Route path="/" component={Foo} />
-    </Container>
+    <Switch>
+      <Route exact path="/quests" component={Quests} />
+      <Route exact path="/assigners" component={Assigners} />
+      <Route exact path="/profile" component={Profile} />
+      <Route exact path="/settings" component={Settings} />
+      <Route path="/" component={Home} />
+    </Switch>
   </ConnectedRouter>
-);
-
-const Foo = () => (
-  <div>
-    <Container>
-      <Header as="h1">Nico nico nii!</Header>
-      <Divider />
-      <p>Testing if this works. Please let this work.</p>
-      <Divider />
-      <QuestsContainer />
-    </Container>
-    <Divider/>
-    <Container>
-      <QuestForm />
-    </Container>
-    <Divider/>
-    <Assigner.Details {...defaultAssigners[Math.floor(Math.random() * defaultAssigners.length)]} />
-    <Assigner.Compact {...defaultAssigners[Math.floor(Math.random() * defaultAssigners.length)]} />
-    <AssignerTable />
-  </div>
 );
 
 export default AppRouter;

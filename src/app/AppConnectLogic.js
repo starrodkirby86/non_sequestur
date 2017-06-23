@@ -1,4 +1,4 @@
-import { changeAppSidebarVisibility } from './AppActionCreators';
+import { changeAppSidebarVisibility, changePage } from './AppActionCreators';
 
 export const mapStateToAppProps = (state) => {
   const app = state.app;
@@ -13,3 +13,9 @@ export const mapDispatchToAppProps = (dispatch) => ({
     ),
   }
 );
+
+export const mapDispatchToSidebarProps = (dispatch) => ({
+  onClick: (to) => {
+    return dispatch(changePage(to))
+  },
+});
