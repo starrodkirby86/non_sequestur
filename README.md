@@ -1,6 +1,8 @@
 non sequestur
 =============
 
+![Screenshot](http://i.imgur.com/27LiWvF.png)
+
 A sample project made using Create React App. A glorified Todo app filled with epic quests, danger, and maybe even love?!
 
 The main objective of this project is to learn using Redux and integrating it inside a React project.
