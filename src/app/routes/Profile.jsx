@@ -1,7 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Container, Header, Divider, Feed, Image, Grid, Statistic, Item, Progress } from 'semantic-ui-react';
+import { getAvatarImage } from '../../res/ImageUtil';
+import { mapStateToUserProps } from '../../user/UserConnectLogic';
+import { connect } from 'react-redux';
 
-export const Profile = () => (
+export const ProfilePresentation = (props) => (
   <Container>
     <Container textAlign="left">
       <Header as="h1">Profile</Header>
@@ -11,7 +15,7 @@ export const Profile = () => (
     <Container>
 
       <Image floated="left"
-             src="/res/avatars/avatar63.png"/>
+             src={getAvatarImage(props.avatar)}/>
       <Header as="h1">
         <Header.Content>
           John Doe
@@ -142,5 +146,11 @@ export const Profile = () => (
     </Container>
   </Container>
 );
+
+ProfilePresentation.propTypes = {
+  avatar: PropTypes.number.isRequired
+};
+
+export const Profile = connect(mapStateToUserProps)(ProfilePresentation);
 
 export default Profile;

@@ -20,8 +20,7 @@ export const Home = () => (
       </Container>
     </Segment>
     <Divider />
-    <Grid verticalAlign="top"
-          equal>
+    <Grid verticalAlign="top">
       <Grid.Row>
         <Grid.Column width={8}>
           <Container text>

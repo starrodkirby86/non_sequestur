@@ -4,8 +4,8 @@ import Quest from './Quest';
 import { Card } from 'semantic-ui-react';
 
 const QuestList = ({quests}) => {
-  const questComponents = quests.map((quest) => <Quest {...quest}
-                                                       key={quest.id}/>);
+  const questComponents = quests.map((quest) => <Quest.Card {...quest}
+                                                            key={quest.id}/>);
   return (
     <Card.Group>
       {questComponents}

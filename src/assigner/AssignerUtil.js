@@ -8,7 +8,7 @@ const newAssigner = (name, avatarPath, idolGroup, schoolYear) => ({
   avatarPath,
   idolGroup,
   schoolYear,
-  affection: 0,
+  affection: Math.floor(Math.random() * 100),
   quests: []
 });
 export const GROUPS = [

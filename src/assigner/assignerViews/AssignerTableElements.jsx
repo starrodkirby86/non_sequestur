@@ -4,10 +4,10 @@ import { Table, Image, Progress } from 'semantic-ui-react';
 export const AssignerTableHeader = () => (
   <Table.Header>
     <Table.Row>
-      <Table.HeaderCell>Name</Table.HeaderCell>
-      <Table.HeaderCell>Idol Group</Table.HeaderCell>
-      <Table.HeaderCell>School Year</Table.HeaderCell>
-      <Table.HeaderCell>Affection</Table.HeaderCell>
+      <Table.HeaderCell width={3}>Name</Table.HeaderCell>
+      <Table.HeaderCell width={2}>Idol Group</Table.HeaderCell>
+      <Table.HeaderCell width={2}>School Year</Table.HeaderCell>
+      <Table.HeaderCell width={6}>Affection</Table.HeaderCell>
     </Table.Row>
   </Table.Header>
 );
