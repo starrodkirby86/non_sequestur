@@ -13,6 +13,7 @@ export const assignerTable = ({assigners}) => {
                                                             key={a.name}/>);
   return (
     <Table selectable
+           padded
            compact
            verticalAlign="middle">
       <AssignerTableHeader />

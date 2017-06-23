@@ -1,8 +1,17 @@
 import React from 'react';
+import QuestForm from '../../quest/QuestForm';
+import { QuestsContainer } from '../../quest/QuestsContainer';
+import { Container, Divider } from 'semantic-ui-react';
 
 export const Quests = () => (
   <div>
-    Big booty girls.
+    <Container>
+      <QuestsContainer />
+    </Container>
+    <Divider/>
+    <Container>
+      <QuestForm />
+    </Container>
   </div>
 );
 

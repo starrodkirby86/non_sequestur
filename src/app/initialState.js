@@ -3,7 +3,7 @@ import { defaultAssigners } from '../assigner/AssignerUtil';
 
 export const initialState = {
   app: {
-    visible: false,
+    visible: true,
     activeState: "Quests",
   },
   assigners: defaultAssigners,

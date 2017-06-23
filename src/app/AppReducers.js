@@ -15,6 +15,9 @@ export const appReducer = (state = [], action) => {
   }
 };
 
+// TODO: Fix this bug where using this reducer actually ruins the history.
+// Something here is affecting the router, badly.
+// For now, don't use this.
 const appChangeSidebarVisibility = (state) => {
   return {
     ...state,
@@ -22,6 +25,10 @@ const appChangeSidebarVisibility = (state) => {
   };
 };
 
-const appChangePage = (state, action) => push(action.to);
+// Probably not necessary
+const appChangePage = (state, action) => {
+  push(action.to);
+  return state;
+};
 
 export default appReducer;

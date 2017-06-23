@@ -5,7 +5,6 @@ export const AssignerDetails = ({name, avatarPath, idolGroup, schoolYear, affect
   <Grid columns={2}>
     <Grid.Column mobile={2} tablet={1}>
       <Image src={avatarPath}
-             shape="square"
              width={128}
              height={128} />
     </Grid.Column>
